@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Developer Jeet</title>
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="../utility.css">
+</head>
+
+<body>
+   <header>
+      <nav>
+         <div id="logo">
+            <a href="index.html">Developer Jeet</a>
+         </div>
+
+         <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">source code</a></li>
+            <li><a href="#">portfolio</a></li>
+            <li><a href="#">contact</a></li>
+            <div class="close"><i class="ri-close-circle-fill"></i></div>
+         </ul>
+
+         <div class="menu">
+            <i class="ri-menu-3-line"></i>
+         </div>
+      </nav>
+   </header>
+
+
+
+
+
+
+   <section>
+      <h2><i class="fa-brands fa-html5"></i> HTML</h2>
+      <textarea id="html">
+       <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">L<i class="ri-circle-line"></i>G<i class="ri-circle-line"></i>G</div>
+            <ul>
+                <li>
+                    <a href="#">home</a>
+                </li>
+                <li>
+                    <a href="#">about</a>
+                </li>
+                <li>
+                    <a href="#">contact</a>
+                </li>
+                <li>
+                    <a href="#">services</a>
+                </li>
+
+                <div class="checkbox">
+                    <label for="check">
+                        <input type="checkbox" name="check" id="check">
+                        <span></span>
+                    </label>
+                </div>
+            </ul>
+        </nav>
+
+        <div id="container">
+            <div class="left-box">
+                <div class="socal-link">
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-fill"></i></a>
+                    <a href="#"><i class="ri-twitter-fill"></i></a>
+                    <a href="#"><i class="ri-linkedin-fill"></i></a>
+                </div>
+                <div>
+                    <h1>we're the <br> Best Creative<br>Agency</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta libero in, nam ipsum ex cum nulla autem itaque sapiente id.</p>
+                    <a href="#" class="contact">contact us</a>
+                </div>
+            </div>
+
+            <div class="right-box">
+                <div class="shap">
+                    <img src="Businessman - 500x500.png" alt="">
+                </div>
+            </div>
+            
+        </div>
+    </header>
+
+</body>
+</html>
+    </textarea>
+   </section>
+
+   <!-- ---------------- css --------------- -->
+   <section>
+      <h2><i class="fa-brands fa-css3-alt"></i> CSS</h2>
+      <textarea name="" id="css">
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        html , body{
+            height: 100%;
+            width: 100%;
+            background: var(--bg-color);
+            transition: background-color 0.5s, color 0.5s;
+        }
+        
+        :root {
+            --bg-color: #fff;
+            --text-color: #000;
+            --box-shadow: rgba(0, 0, 0, 0.4);
+        }
+        
+        body.darktheme {
+            --text-color: #fff;
+            --bg-color: #000;
+            --box-shadow: rgba(255, 255, 255, 0.4);
+            transition: background-color 0.5s, color 0.5s;
+        }
+        
+        
+        header nav {
+            width: 100%;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            background: var(--bg-color);
+            box-shadow: 0 0 10px var(--box-shadow);
+            transition: background-color 0.5s, color 0.5s;
+        }
+        
+        nav .logo {
+            font-size: 25px;
+            color: var(--text-color);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            font-size: 17px;
+            color: var(--text-color);
+            position: relative;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #d65a16;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 10px;
+            transition: .5s;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .checkbox label {
+            display: inline-block;
+            width: 3rem;
+            height: 1.5rem;
+            background: var(--text-color);
+            border-radius: 3rem;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .checkbox label span {
+            width: 1rem;
+            height: 1rem;
+            background: var(--bg-color);
+            position: absolute;
+            left: 5px;
+            top: 4px;
+            border-radius: 50%;
+            transition: .5s;
+            display: inline-block;
+        }
+        
+        #check {
+            visibility: hidden;
+        }
+        
+        #check:checked+span {
+            left: inherit;
+            transform: translateX(14px);
+            background: #000;
+        }
+        
+        #container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 7%;
+            height: 91vh;
+        }
+        
+        #container .left-box {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        #container .left-box .socal-link {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        #container .left-box .socal-link a {
+            text-decoration: none;
+            color: #d65a16;
+            font-size: 18px;
+            transition: .5s;
+        }
+        
+        #container .left-box .socal-link a:hover {
+            transform: translateY(-5px);
+        }
+        
+        #container .left-box h1 {
+            font-size: 3.5rem;
+            line-height: .9;
+            font-weight: 900;
+            color: var(--text-color);
+        }
+        
+        #container .left-box p {
+            width: 80%;
+            font-size: 15px;
+            line-height: 1.6;
+            padding-top: 2rem;
+            padding-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+        
+        #container .left-box .contact {
+            text-decoration: none;
+            color: var(--bg-color);
+            background: #d65a16;
+            padding: .4rem 1rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px var(--box-shadow);
+        }
+        
+        .right-box {
+            position: relative;
+        }
+        
+        .right-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+        }
+        
+        .right-box .shap {
+            position: relative;
+            width: 35vw;
+            height: 35vw;
+            background: #d65a16;
+            border-radius: 47% 53% 49% 51% / 30% 26% 74% 70%;
+            overflow: hidden;
+        }
+    </textarea>
+   </section>
+
+
+
+
+   <!-- --------------- js --------------- -->
+   <section>
+      <h2><i class="fa-brands fa-square-js"></i> JS</h2>
+      <textarea name="js" id="js">
+         const checkbox = document.querySelector("#check");
+
+         checkbox.addEventListener("change", function () {
+            if (checkbox.checked) {
+               document.body.classList.add("darktheme");
+            }
+            else {
+               document.body.classList.remove("darktheme");
+            }
+         })
+      </textarea>
+   </section>
+
+
+   <footer>
+      <ul>
+         <h3>about</h3>
+         <li><a href="#">hone</a></li>
+         <li><a href="#">hone</a></li>
+         <li><a href="#">hone</a></li>
+         <li><a href="#">hone</a></li>
+      </ul>
+      <ul>
+         <h3>about</h3>
+         <li><a href="#">hone</a></li>
+         <li><a href="#">hone</a></li>
+         <li><a href="#">hone</a></li>
+         <li><a href="#">hone</a></li>
+      </ul>
+      <ul>
+         <h3>about</h3>
+         <li><a href="#">hone</a></li>
+         <li><a href="#">hone</a></li>
+         <li><a href="#">hone</a></li>
+         <li><a href="#">hone</a></li>
+      </ul>
+
+      <div>
+         <h3>links</h3>
+         <ul class="flex">
+            <li><a href="#"><i class="ri-instagram-line"></i></a></li>
+            <li><a href="#"><i class="ri-facebook-circle-fill"></i></a></li>
+            <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
+            <li><a href="#"><i class="ri-linkedin-fill"></i></a></li>
+         </ul>
+      </div>
+   </footer>
+
+
+
+   <script>
+      function link() {
+         document.getElementById('home-link').addEventListener('click', function (event) {
+            event.preventDefault();  // Prevents the default behavior of following the link
+            // Add any other actions you want to perform when the link is clicked
+         });
+         document.getElementById('about-link').addEventListener('click', function (event) {
+            event.preventDefault();  // Prevents the default behavior of following the link
+            // Add any other actions you want to perform when the link is clicked
+         });
+         document.getElementById('source-link').addEventListener('click', function (event) {
+            event.preventDefault();  // Prevents the default behavior of following the link
+            // Add any other actions you want to perform when the link is clicked
+         });
+         document.getElementById('portfolio-link').addEventListener('click', function (event) {
+            event.preventDefault();  // Prevents the default behavior of following the link
+            // Add any other actions you want to perform when the link is clicked
+         });
+         document.getElementById('contact-link').addEventListener('click', function (event) {
+            event.preventDefault();  // Prevents the default behavior of following the link
+            // Add any other actions you want to perform when the link is clicked
+         });
+      }
+
+      link();
+
+   </script>
+
+
+<script src="../script.js"></script>
+</body>
+
+</html>
