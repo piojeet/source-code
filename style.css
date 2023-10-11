@@ -55,12 +55,25 @@ nav ul li a {
     text-decoration: none;
     color: var(--text-color);
     display: inline-block;
+    pointer-events: painted;
     cursor: no-drop;
 }
 
 nav ul li a:hover {
     animation: tr .5s;
     color: #50948b;
+}
+
+nav .close {
+    display: none;
+}
+
+nav .menu {
+    display: none;
+}
+
+section {
+    padding: 3rem 5%;
 }
 
 section div img {
@@ -80,6 +93,7 @@ section div {
     width: 25rem;
     box-shadow: 0 0 10px #50948b;
     transition: .5s;
+    height: 14rem;
 }
 
 section div:hover {
