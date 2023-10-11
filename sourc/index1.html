@@ -41,54 +41,56 @@
    <section>
       <h2><i class="fa-brands fa-html5"></i> HTML</h2>
       <textarea id="html">
-    <header>
-        <nav>
-            <div class="logo">L<i class="ri-circle-line"></i>G<i class="ri-circle-line"></i>G</div>
-            <ul>
-                <li>
-                    <a href="#">home</a>
-                </li>
-                <li>
-                    <a href="#">about</a>
-                </li>
-                <li>
-                    <a href="#">contact</a>
-                </li>
-                <li>
-                    <a href="#">services</a>
-                </li>
-
-                <div class="checkbox">
-                    <label for="check">
-                        <input type="checkbox" name="check" id="check">
-                        <span></span>
-                    </label>
+        
+            <header>
+                <nav>
+                    <div class="logo">L<i class="ri-circle-line"></i>G<i class="ri-circle-line"></i></div>
+                    <div class="flex">
+                        <ul class="navlist">
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">about</a></li>
+                            <li><a href="#">contact</a></li>
+                            <li><a href="#">services</a></li>
+                        </ul>
+        
+                        <div class="menu">
+                            <i class="ri-menu-3-line"></i>
+                            <i class="ri-close-line"></i>
+                        </div>
+                        <div class="checkbox">
+                            <label for="chek">
+                                <input type="checkbox" name="chek" id="chek">
+                                <span></span>
+                            </label>
+                        </div>
+                    </div>
+                </nav>
+        
+                <div id="container">
+                    <div class="left-box">
+                        <div class="socal-link">
+                            <a href="#"><i class="ri-facebook-fill"></i></a>
+                            <a href="#"><i class="ri-instagram-fill"></i></a>
+                            <a href="#"><i class="ri-twitter-fill"></i></a>
+                            <a href="#"><i class="ri-linkedin-fill"></i></a>
+                        </div>
+                        <div>
+                            <h1>We're The <br> Best Creative<br>Agency</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos voluptatibus ex quasi aut. Dolores
+                                voluptatum iure, earum repellendus velit minus!</p>
+        
+                            <a href="#" class="contact">contact us</a>
+                        </div>
+                    </div>
+        
+                    <div class="right-box">
+                        <div class="shap">
+                            <img src="Businessman - 500x500.png" alt="">
+                        </div>
+                    </div>
                 </div>
-            </ul>
-        </nav>
-
-        <div id="container">
-            <div class="left-box">
-                <div class="socal-link">
-                    <a href="#"><i class="ri-facebook-fill"></i></a>
-                    <a href="#"><i class="ri-instagram-fill"></i></a>
-                    <a href="#"><i class="ri-twitter-fill"></i></a>
-                    <a href="#"><i class="ri-linkedin-fill"></i></a>
-                </div>
-                <div>
-                    <h1>we're the <br> Best Creative<br>Agency</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta libero in, nam ipsum ex cum nulla autem itaque sapiente id.</p>
-                    <a href="#" class="contact">contact us</a>
-                </div>
-            </div>
-
-            <div class="right-box">
-                <div class="shap">
-                    <img src="Businessman - 500x500.png" alt="">
-                </div>
-            </div>
-            
-        </div>
+            </header>
+  
     </textarea>
    </section>
 
@@ -96,13 +98,15 @@
    <section>
       <h2><i class="fa-brands fa-css3-alt"></i> CSS</h2>
       <textarea name="" id="css">
-         *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: sans-serif;
         }
-        html , body{
+        
+        html,
+        body {
             height: 100%;
             width: 100%;
             background: var(--bg-color);
@@ -114,6 +118,7 @@
             --text-color: #000;
             --box-shadow: rgba(0, 0, 0, 0.4);
         }
+        
         
         body.darktheme {
             --text-color: #fff;
@@ -133,6 +138,12 @@
             background: var(--bg-color);
             box-shadow: 0 0 10px var(--box-shadow);
             transition: background-color 0.5s, color 0.5s;
+        }
+        
+        .flex {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
         }
         
         nav .logo {
@@ -193,14 +204,30 @@
             display: inline-block;
         }
         
-        #check {
+        #chek {
             visibility: hidden;
         }
         
-        #check:checked+span {
+        #chek:checked+span {
             left: inherit;
             transform: translateX(14px);
-            background: #000;
+            background-color: #000;
+        }
+        
+        .menu {
+            position: relative;
+            display: none;
+            font-size: 20px;
+            color: var(--text-color);
+            
+        }
+        
+        .ri-menu-3-line {
+            display: none;
+        }
+        
+        .ri-close-line {
+            display: none;
         }
         
         #container {
@@ -220,7 +247,7 @@
         #container .left-box .socal-link {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 1.5rem;
         }
         
         #container .left-box .socal-link a {
@@ -267,7 +294,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            position: absolute;
+            position: absolute; 
         }
         
         .right-box .shap {
@@ -288,16 +315,19 @@
    <section>
       <h2><i class="fa-brands fa-square-js"></i> JS</h2>
       <textarea name="js" id="js">
-         const checkbox = document.querySelector("#check");
+        function theme() {
+            const checkbox = document.querySelector("#chek");
 
-         checkbox.addEventListener("change", function () {
-            if (checkbox.checked) {
-               document.body.classList.add("darktheme");
-            }
-            else {
-               document.body.classList.remove("darktheme");
-            }
-         })
+            checkbox.addEventListener("change", function () {
+                if (checkbox.checked) {
+                    document.body.classList.add("darktheme");
+                }
+                else {
+                    document.body.classList.remove("darktheme");
+                }
+            });
+        }
+        theme();
       </textarea>
    </section>
 
